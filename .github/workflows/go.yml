@@ -22,7 +22,7 @@ jobs:
     - name: GoReleaser Action
       uses: goreleaser/goreleaser-action@v6.3.0
       with:
-        args: release --clean
+        args: release --snapshot
         workdir: aareguru
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
