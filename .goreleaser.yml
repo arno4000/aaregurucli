@@ -29,9 +29,6 @@ nfpms:
 brews:
   - homepage: https://aare.guru/
     description: aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli
-scoops:
-  - homepage: "https://aare.guru/"
-    description: "aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli"
 checksum:
   name_template: 'checksums.txt'
 snapshot:
