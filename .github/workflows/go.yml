@@ -18,7 +18,7 @@ jobs:
     - name: GoReleaser Action
       uses: goreleaser/goreleaser-action@v6.3.0
       with:
-        args: release --snapshot
+        args: release
         workdir: .
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
