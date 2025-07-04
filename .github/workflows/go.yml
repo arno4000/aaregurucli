@@ -18,6 +18,7 @@ jobs:
     - name: Create folder
       run: |
         mkdir aareguru
+        ls -lah
 
     - name: GoReleaser Action
       uses: goreleaser/goreleaser-action@v6.3.0
