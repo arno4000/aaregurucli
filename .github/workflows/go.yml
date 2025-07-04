@@ -15,10 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Create folder
-      run: |
-        mkdir aareguru
-        ls -lah
+      name: Checkout repo
 
     - name: GoReleaser Action
       uses: goreleaser/goreleaser-action@v6.3.0
