@@ -1,3 +1,4 @@
+version: 2
 project_name: aareguru
 builds:
 - env:
@@ -8,43 +9,28 @@ builds:
     - darwin
     - windows
   goarch:
-    - 386
     - amd64
     - arm
     - arm64
-archive:
-# create zip for windows
-  format_overrides:
-    - goos: windows
-      format: zip
-nfpm:
-  vendor: aare.guru
-  homepage: https://aare.guru/
-  maintainer: Claude <claude.gex@codeblock.ch>
-  description: aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli
-
-  license: Apache 2.0
-
-  # Formats to be generated.
-  formats:
-    - deb
-    - rpm
-brew:
-  github:
-    owner: gexclaude
-    name: homebrew-tap
-  folder: Formula
-  homepage:  https://aare.guru/
-  description: aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli
-scoop:
-  bucket:
-    owner: gexclaude
-    name: scoop-bucket
-  commit_author:
-    name: goreleaserbot
-    email: contact@codeblock.ch
-  homepage: "https://aare.guru/"
-  description: "aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli"
+archives:
+  - format_overrides:
+      - goos: windows
+        format: zip
+nfpms:
+  - vendor: aare.guru
+    homepage: https://aare.guru/
+    maintainer: Claude <claude.gex@codeblock.ch>
+    description: aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli
+    license: Apache 2.0
+    formats:
+      - deb
+      - rpm
+brews:
+  - homepage: https://aare.guru/
+    description: aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli
+scoops:
+  - homepage: "https://aare.guru/"
+    description: "aare.guru Aaretemperatur & Wetter & Sonne fürs Aareschwimmen - Chills mau wider chli"
 checksum:
   name_template: 'checksums.txt'
 snapshot:
