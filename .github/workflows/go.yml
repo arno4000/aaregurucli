@@ -15,15 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Create folder
-      run: |
-        mkdir aareguru
-
     - name: GoReleaser Action
       uses: goreleaser/goreleaser-action@v6.3.0
       with:
         args: release --snapshot
-        workdir: aareguru
+        workdir: .
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Upload assets
